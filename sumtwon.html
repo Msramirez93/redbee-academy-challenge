@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <!--suma de dos/tres numeros-->
+  <title>sum two numbers</title>
+  <body>
+    <h1>Sumar 3 números</h1>
+    <p>Por favor, introduzca tres números:</p>
+    <input id="num1" /><br />
+    <input id="num2" /><br />
+    <input id="num3" />
+    <button type="button" onclick="myFunction()">Sumar</button>
+    <p id="sumando"></p>
+    <script>
+      function myFunction() {
+        var x, y, h, suma, text;
+        x = document.getElementById("num1").value;
+        y = document.getElementById("num2").value;
+        h = document.getElementById("num3").value;
+        if (isNaN(x) || isNaN(y) || isNaN(h)) {
+          text = "Es necesarios introducir tres números válidos";
+        } else {
+          suma = parseFloat(x) + parseFloat(y) + parseFloat(h);
+          text = suma;
+        }
+        document.getElementById("sumando").innerHTML = text;
+      }
+    </script>
+     <footer>2021-Melany salome Ramirez</footer>
+  </body>
+</html>
